@@ -1,0 +1,32 @@
+ALGORITHM problem1 
+VAR
+    S:STRING:='str'; 
+    CH:CHAR:='CH'; 
+    i,j,k,x,y,z:INTEGER;
+BEGIN 
+Read('str') ;  
+x:=0 ; 
+FOR i FROM 0 TO str.length-1 STEP 1  DO  
+IF (str[i]=str.length-1 <> "." || str[i]<>" ") THEN
+    str[i] + "." ; 
+    x:= str[i] + x ;
+END_IF  
+END_FOR  
+
+y:=0 ; 
+FOR j FROM 0 TO CH.length-1 STEP 1  DO 
+    y:=CH[j]+y ;
+END_FOR  
+
+z:=0 ; 
+FOR k FROM 0 TO CH.length-1 STEP 1  DO
+IF ( CH[k] in ["a","e","i","o","u","y"]) THEN 
+   z:=z+CH[k]; 
+END_IF
+END_FOR 
+
+write("the length of the sentence :" , x) 
+write("the number of words in the sentence :" , y) 
+write("the number of vowels :" , z)
+
+END
